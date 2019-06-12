@@ -54,7 +54,7 @@ const ExpenseForm = props => {
       <form onSubmit={handleSubmit}>
         <div className={style.inputGroup}>
           <input
-            type="number"
+            type="input"
             placeholder="Add your expense..."
             className="input"
             name="expense"

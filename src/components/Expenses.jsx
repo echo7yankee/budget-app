@@ -7,7 +7,7 @@ const Expenses = ({ expense, deleteExpense, toggleEdit }) => {
   return (
     <div className={style.expense}>
       <p>
-        Expense: <span className="green"> {expense.expense}$</span>{" "}
+        Expense: <span> {expense.expense}</span>{" "}
       </p>
       <p>
         Expense Amount: <span className="green">{expense.expAmount}$</span>{" "}
