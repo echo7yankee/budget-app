@@ -16,9 +16,7 @@ const ViewCalc = ({
   budget,
   deleteExpense,
   toggleEdit,
-  editExpense,
-  expense,
-  expAmount
+  editExpense
 }) => {
   const totalExpenses = expenses.reduce((a, b) => {
     return parseInt(a) + parseInt(b.expAmount);
@@ -37,7 +35,7 @@ const ViewCalc = ({
         </div>
         <div>
           <h4>Balance</h4>
-          <p className={budget - expAmount >= 0 ? "green" : "red"}>
+          <p className={budget - totalExpenses >= 0 ? "green" : "red"}>
             {budget - totalExpenses}$
           </p>
         </div>
@@ -64,9 +62,7 @@ const ViewCalc = ({
 const mapStateToProps = state => {
   return {
     budget: state.budget.budget,
-    expenses: state.budget.expenses,
-    expense: state.budget.expense,
-    expAmount: state.budget.expAmount
+    expenses: state.budget.expenses
   };
 };
 

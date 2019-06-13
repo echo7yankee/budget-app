@@ -9,9 +9,7 @@ import uuidv4 from "uuid/v4";
 
 const initialState = {
   budget: 0,
-  expenses: [],
-  expAmount: 0,
-  expense: 0
+  expenses: []
 };
 
 const budgetReducer = (state = initialState, action) => {
@@ -31,9 +29,7 @@ const budgetReducer = (state = initialState, action) => {
             expAmount: action.payload.expAmount,
             id: uuidv4()
           }
-        ],
-        expense: action.payload.expense,
-        expAmount: action.payload.expAmount
+        ]
       };
     case DELETE_EXPENSE:
       return {
@@ -67,9 +63,7 @@ const budgetReducer = (state = initialState, action) => {
             };
           }
           return expense;
-        }),
-        expense: action.payload.expense,
-        expAmount: action.payload.expAmount
+        })
       };
 
     default:
